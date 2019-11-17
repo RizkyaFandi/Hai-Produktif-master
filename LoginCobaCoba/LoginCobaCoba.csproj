@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{007DE50B-1EFA-4F0B-9B74-35C85BAC4A18}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LoginCobaCoba</RootNamespace>
+    <AssemblyName>LoginCobaCoba</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Email, Version=13.0.35.1039, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Email.13.0.0.1039\lib\net35\GemBox.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.9\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Akun.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DataTasks.cs" />
+    <Compile Include="DBModel.cs" />
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs" />
+    <Compile Include="Experience.cs" />
+    <Compile Include="FormEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEvent.designer.cs">
+      <DependentUpon>FormEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GantiPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantiPassword.Designer.cs">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loker.cs" />
+    <Compile Include="FormLomba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLomba.Designer.cs">
+      <DependentUpon>FormLomba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lomba.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="ProfileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileEditor.Designer.cs">
+      <DependentUpon>ProfileEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillBisnis.cs" />
+    <Compile Include="SkillDesign.cs" />
+    <Compile Include="SkillEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillEditor.Designer.cs">
+      <DependentUpon>SkillEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillIT.cs" />
+    <Compile Include="SkillJurnalisme.cs" />
+    <Compile Include="SkillRiset.cs" />
+    <Compile Include="SkillUmum.cs" />
+    <Compile Include="VerifEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifEmail.Designer.cs">
+      <DependentUpon>VerifEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skill.Designer.cs">
+      <DependentUpon>Skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks.Designer.cs">
+      <DependentUpon>Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkillsResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillsResume.Designer.cs">
+      <DependentUpon>SkillsResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowonganKerja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowonganKerja.Designer.cs">
+      <DependentUpon>LowonganKerja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadMore.Designer.cs">
+      <DependentUpon>LoadMore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEvent.resx">
+      <DependentUpon>FormEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantiPassword.resx">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLomba.resx">
+      <DependentUpon>FormLomba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileEditor.resx">
+      <DependentUpon>ProfileEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillEditor.resx">
+      <DependentUpon>SkillEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifEmail.resx">
+      <DependentUpon>VerifEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skill.resx">
+      <DependentUpon>Skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks.resx">
+      <DependentUpon>Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillsResume.resx">
+      <DependentUpon>SkillsResume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowonganKerja.resx">
+      <DependentUpon>LowonganKerja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadMore.resx">
+      <DependentUpon>LoadMore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\36.png" />
+    <None Include="Resources\35.png" />
+    <None Include="Resources\34.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\19.png" />
+    <None Include="Resources\Resume5.png" />
+    <None Include="Resources\Resume4.png" />
+    <None Include="Resources\Resume3.png" />
+    <None Include="Resources\Resume2.png" />
+    <None Include="Resources\Resume1.png" />
+    <None Include="Resources\BACK3.png" />
+    <None Include="Resources\BACK2.png" />
+    <None Include="Resources\BACK1.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\10.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\default-profile-mentor-rounded%402x.70dc0c67.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

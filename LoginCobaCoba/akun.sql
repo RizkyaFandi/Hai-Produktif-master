@@ -1,0 +1,1 @@
+﻿INSERT INTO [dbo].[Akun] ([Id], [First_Name], [Last_Name], [Phone], [Email], [Uname], [Pass]) VALUES (1, 'Firhan', 'Ramadhani', 082151751126, 'firhanmahdi@gmail.com', 'pbo', 'sukses');
